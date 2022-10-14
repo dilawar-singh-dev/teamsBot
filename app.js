@@ -10,7 +10,10 @@ app.get('/', async (req, res) => {
 
         const browser = await puppeteer.launch({
             args: ['--no-sandbox', '--disable-setuid-sandbox'],
+            executablePath: '/usr/bin/chromium-browser'
           });
+
+          
 
         for await (const name of names.slice(0, 100)) {
 
